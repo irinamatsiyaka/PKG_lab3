@@ -211,7 +211,7 @@ int main(int argc, char *argv[]) {
     QPushButton highPassFilterBtn("Применить высокочастотный фильтр");
     QPushButton adaptiveThresholdBtn("Применить адаптивную пороговую обработку");
 
-    // ... добавьте другие кнопки по необходимости
+
 
     layout.addWidget(&labelOriginal, 0, Qt::AlignCenter);
     layout.addWidget(&labelProcessed, 0, Qt::AlignCenter);
@@ -219,7 +219,7 @@ int main(int argc, char *argv[]) {
     layout.addWidget(&meanThresholdBtn, 0, Qt::AlignCenter);
     layout.addWidget(&highPassFilterBtn, 0, Qt::AlignCenter);
     layout.addWidget(&adaptiveThresholdBtn, 0, Qt::AlignCenter);
-    // ... добавьте другие кнопки в ваш layout
+
 
     QObject::connect(&otsuThresholdBtn, &QPushButton::clicked, [&]() {
         QString fileName = QFileDialog::getOpenFileName(&mainWindow, "Open Image", "", "Images (*.png *.jpg *.bmp)");
@@ -292,7 +292,6 @@ int main(int argc, char *argv[]) {
         labelProcessed.setPixmap(QPixmap::fromImage(processedImage));
     });
 
-    // ... добавьте другие обработчики для кнопок
 
     mainWindow.setCentralWidget(&centralWidget);
     mainWindow.show();
